@@ -4,10 +4,11 @@ import './icon.scss';
 import classnames from '../helpers/classnames';
 interface IconProps extends React.SVGAttributes<SVGElement> {
   name: string;
+  color?: string;
 }
-const Icon: React.FC<IconProps> = ({ className, name, ...restProps }) => {
+const Icon: React.FC<IconProps> = ({ className, name, color, ...restProps }) => {
   return (
-    <svg className={classnames('tm-icon', className)} {...restProps}>
+    <svg className={classnames('tm-icon', className)} fill={color} {...restProps}>
       <use xlinkHref={`#${name}`}></use>
     </svg>
   );

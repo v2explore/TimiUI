@@ -4,10 +4,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = Object.assign({}, base, {
   mode: 'development',
+  entry: {
+    index: './example.tsx'
+  },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'TiMi-UI',
-      template: 'index.html',
+      template: 'example.html',
     }),
   ],
 });
