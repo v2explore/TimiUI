@@ -10,7 +10,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist/lib'),
-    library: 'timi-ui',
+    library: 'timiui',
     libraryTarget: 'umd',
   },
   module: {

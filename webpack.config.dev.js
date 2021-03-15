@@ -9,7 +9,7 @@ module.exports = Object.assign({}, base, {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'TiMi-UI',
+      title: 'TiMi UI',
       template: 'example.html',
     }),
   ],
