@@ -1,0 +1,19 @@
+.tm-example {
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 1.8em;
+    padding: 4px 16px;
+    color: #FFF;
+    font-size: 22px;
+    background-image: linear-gradient(90deg,#526efa, #7a90ff);;
+  }
+  &-header-icon {
+    margin-right: 12px;
+  }
+  &-header-title {
+    display: flex;
+    align-items: center;
+  }
+}
