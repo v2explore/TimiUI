@@ -12,8 +12,8 @@ interface Props {
   style?: React.CSSProperties;
   footer?: ReactFragment | ReactElement | null;
 }
-
-const scopedClass = scopedClassMaker('tm-dialog');
+// scopedClass
+const sc = scopedClassMaker('tm-dialog');
 
 const Dialog: React.FC<Props> = ({
   title,
@@ -40,22 +40,22 @@ const Dialog: React.FC<Props> = ({
   };
   const content = visible ? (
     <React.Fragment>
-      <div className={scopedClass('mask')} onClick={onClickMask}></div>
-      <div className={scopedClass('wrap')} style={style}>
-        <div className={scopedClass('close')} onClick={onClickClose}>
+      <div className={sc('mask')} onClick={onClickMask}></div>
+      <div className={sc('wrap')} style={style}>
+        <div className={sc('close')} onClick={onClickClose}>
           <Icon name="close" color="#fff" />
         </div>
-        <header className={scopedClass('header')}>{ title || 'Title' }</header>
-        <main className={scopedClass('main')}>{children}</main>
+        <header className={sc('header')}>{ title || 'Title' }</header>
+        <main className={sc('main')}>{children}</main>
 
         {footer ? (
-          <footer className={scopedClass('footer')}>{footer}</footer>
+          <footer className={sc('footer')}>{footer}</footer>
         ) : footer === null ? null : (
-          <footer className={scopedClass('footer')}>
-            <button className={scopedClass('button')} onClick={onClickClose}>
+          <footer className={sc('footer')}>
+            <button className={sc('button')} onClick={onClickClose}>
               取消
             </button>
-            <button className={scopedClass('button')} onClick={onClickClose}>
+            <button className={sc('button')} onClick={onClickClose}>
               确定
             </button>
           </footer>
@@ -111,8 +111,8 @@ export const confirm = (
   const close = createModal(
     content,
     <React.Fragment>
-      <button className={scopedClass('button')} onClick={() => close() && no && no()}>取消</button>
-      <button className={scopedClass('button')} onClick={() => close() && yes && yes()}>确定</button>
+      <button className={sc('button')} onClick={() => close() && no && no()}>取消</button>
+      <button className={sc('button')} onClick={() => close() && yes && yes()}>确定</button>
     </React.Fragment>,
   );
 };

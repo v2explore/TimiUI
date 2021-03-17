@@ -1,0 +1,21 @@
+.tm-layout {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  &-content {
+    flex-grow: 2;
+  }
+  & & {
+    flex-grow: 1;
+    flex-direction: row;
+  }
+  &-hasAsider {
+    flex-direction: row;
+    .tm-layout-asider {
+      height: auto;
+    }
+    .tm-layout {
+      flex-direction: column;
+    }
+  }
+}

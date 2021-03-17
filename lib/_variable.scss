@@ -1,2 +1,10 @@
 $main-color: linear-gradient(90deg,#526efa, #7a90ff);
-// $main-color: #526efa;
+$default-color: #7a90ff;
+$primary-color: #526efa;
+$common-color: #6b83fb;
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
