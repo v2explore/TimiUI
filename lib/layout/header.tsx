@@ -1,6 +1,5 @@
 import React from 'react';
-import { scopedClassMaker } from '../utils/classes';
-import classnames from '../helpers/classnames';
+import { scopedClassMaker, classnames } from '../helpers/helpers';
 
 const sc = scopedClassMaker('tm-layout');
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
-import { scopedClassMaker } from './lib/helpers/classnames';
+import { scopedClassMaker } from './lib/helpers/helpers';
 import { Icon } from './lib/index';
 import IconExample from './examples/icon.example';
 import DialogExample from './examples/dialog.example';

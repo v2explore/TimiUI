@@ -1,4 +1,4 @@
-import classnames, { scopedClassMaker } from '../classnames';
+import { scopedClassMaker, classnames } from '../helpers';
 
 describe('classnames', () => {
   it('接受1个className', () => {
