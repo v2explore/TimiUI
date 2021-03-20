@@ -5,8 +5,7 @@ defaults: &defaults
 
 version: 2
 branches:
-  only:
-    - main
+  only: main
 jobs:
   prepare:
     <<: *defaults
@@ -59,6 +58,9 @@ workflows:
   version: 2
   build_accept_deploy:
     jobs:
+      filters:
+        branches:
+          only: - main
       - prepare
       - build:
           requires:
