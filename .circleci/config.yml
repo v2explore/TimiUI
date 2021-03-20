@@ -57,9 +57,9 @@ workflows:
   build_accept_deploy:
     jobs:
       - prepare:
-        filters:
-          branches:
-            only: main
+          filters:
+            branches:
+              only: main
       - build:
           requires:
             - test
