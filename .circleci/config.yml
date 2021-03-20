@@ -9,7 +9,6 @@ general:
     only:
      - main # list of branches to build
 jobs:
-jobs:
   prepare:
     <<: *defaults
     steps:
