@@ -1,19 +1,103 @@
-.tm-example {
-  &-header {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: 1.8em;
-    padding: 4px 16px;
-    color: #FFF;
-    font-size: 22px;
-    background-image: linear-gradient(90deg,#526efa, #7a90ff);;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC,
+    Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei,
+    sans-serif;
+}
+*::before {
+  box-sizing: border-box;
+}
+*::after {
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+pre {
+  font-family: 'Fira Code Medium', Consolas, monospace;
+}
+
+$padding: 16px;
+$main-color: #526efa;
+$bg-color: #7a90ff;
+$border-color: #eee;
+
+body {
+  font-size: 16px;
+}
+.tm-site-page {
+  background: #ffffff;
+  min-height: 100vh;
+}
+.tm-site-main {
+  padding-top: 16px;
+}
+
+.tm-site-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 1.8em;
+  padding: 4px 16px;
+  color: #fff;
+  font-size: 22px;
+  background-image: linear-gradient(90deg, #526efa, #7a90ff);
+}
+.tm-site-header-icon {
+  margin-right: 12px;
+}
+.tm-site-header-title {
+  display: flex;
+  align-items: center;
+}
+.tm-site-aside {
+  border-right: 1px solid #eeeeee;
+  margin-right: 16px;
+  h2 {
+    padding: $padding;
+    font-size: 18px;
   }
-  &-header-icon {
-    margin-right: 12px;
+  ul {
+    min-width: 12em;
+    > li {
+      a {
+        color: #333;
+        display: block;
+        padding: 8px $padding;
+        &:hover {
+          color: $main-color;
+        }
+        &.active {
+          color: white;
+          background: fade-out($color: $bg-color, $amount: 0.2);
+          border-right: 3px solid $main-color;
+        }
+      }
+    }
   }
-  &-header-title {
-    display: flex;
-    align-items: center;
-  }
+}
+.tm-site-footer {
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+  padding: 16px 0;
+  border-top: 1px solid $border-color;
+}
+.example {
+  padding: 16px 0;
 }

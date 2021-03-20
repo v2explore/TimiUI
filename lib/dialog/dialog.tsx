@@ -27,10 +27,6 @@ const Dialog: React.FC<Props> = ({
   const onClickClose: React.MouseEventHandler = (e) => {
     if (onClose) {
       onClose(e);
-    } else {
-      ReactDOM.render(<React.Fragment></React.Fragment>, container);
-      ReactDOM.unmountComponentAtNode(container);
-      container.remove();
     }
   };
   const onClickMask: React.MouseEventHandler = (e) => {
@@ -63,9 +59,7 @@ const Dialog: React.FC<Props> = ({
       </div>
     </React.Fragment>
   ) : null;
-  const container = document.createElement('div');
-  document.body.appendChild(container);
-  return ReactDOM.createPortal(content, container);
+  return ReactDOM.createPortal(content, document.body);
 };
 
 Dialog.defaultProps = {

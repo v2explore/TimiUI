@@ -10,7 +10,7 @@ interface Props extends React.HTMLAttributes<HTMLElement> {}
 const Layout: React.FC<Props> = (props) => {
   const { className, children, ...rest } = props;
   const _children = children as Array<ReactElement>;
-  const hasAsider = _children.length &&
+  const hasAsider = _children && _children.length &&
     _children.reduce((result, curr) =>  result || curr.type === Asider, false);
   return <div className={classnames(sc(''), className , hasAsider ? sc('hasAsider') : '')} {...rest}>{children}</div>;
 };

@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import Icon from '../lib/icon/icon';
 
-export default function () {
+export default (): ReactElement => {
   return (
     <div>
-      <h2>图标</h2>
+      <h2>Icon图标</h2>
       <div>
         <Icon name="album" />
         <Icon name="alipay" />
@@ -37,4 +37,4 @@ export default function () {
       </div>
     </div>
   );
-}
+};
