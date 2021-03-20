@@ -1,0 +1,10 @@
+#https://github.com/revolunet/create-react-app-circleci/blob/master/.circleci/config.yml
+defaults: &defaults
+  docker:
+    - image: circleci/node:15
+
+version: 2
+general:
+  branches:
+    only:
+     - main # list of branches to build
