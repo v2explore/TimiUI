@@ -2,10 +2,11 @@
 defaults: &defaults
   docker:
     - image: circleci/node:15
-  branches:
-    only:
-     - main # list of branches to build
+
 version: 2
+branches:
+  only:
+    - main
 jobs:
   prepare:
     <<: *defaults
