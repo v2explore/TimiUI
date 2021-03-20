@@ -60,7 +60,7 @@ workflows:
     jobs:
       filters:
         branches:
-          only: - main
+          only: main
       - prepare
       - build:
           requires:
