@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Dialog, { alert, confirm } from '../lib/dialog/dialog';
+import Dialog, { alert, confirm } from '../../lib/dialog/dialog';
 
 export default function () {
   const [visible, setVisible] = useState(false);

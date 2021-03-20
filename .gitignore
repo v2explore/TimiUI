@@ -105,3 +105,5 @@ dist
 
 # test
 test-results/
+
+doc/

@@ -1,9 +1,9 @@
 import React, { ReactElement } from 'react';
-import Layout from '../lib/layout/layout';
-import Header from '../lib/layout/header';
-import Asider from '../lib/layout/asider';
-import Content from '../lib/layout/content';
-import Footer from '../lib/layout/footer';
+import Layout from '../../lib/layout/layout';
+import Header from '../../lib/layout/header';
+import Asider from '../../lib/layout/asider';
+import Content from '../../lib/layout/content';
+import Footer from '../../lib/layout/footer';
 import './layout.example.scss';
 
 export default (): ReactElement => {

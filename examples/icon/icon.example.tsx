@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import Icon from '../lib/icon/icon';
+import Icon from '../../lib/icon/icon';
 
 export default (): ReactElement => {
   return (
