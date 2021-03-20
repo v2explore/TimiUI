@@ -14,7 +14,7 @@ module.exports = Object.assign({}, base, {
     new HtmlWebpackPlugin({
       title: 'TiMi UI',
       template: 'example.html',
-      filename: 'example.html'
+      filename: 'index.html'
     }),
   ],
 });
