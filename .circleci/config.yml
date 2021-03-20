@@ -4,8 +4,6 @@ defaults: &defaults
     - image: circleci/node:15
 
 version: 2
-branches:
-  only: main
 jobs:
   prepare:
     <<: *defaults
@@ -58,16 +56,22 @@ workflows:
   version: 2
   build_accept_deploy:
     jobs:
-      filters:
-        branches:
-          only: main
-      - prepare
+      - prepare:
+        filters:
+          branches:
+            only: main
       - build:
           requires:
             - test
+          filters:
+            branches:
+              only: main
       - test:
           requires:
             - prepare
+          filters:
+            branches:
+              only: main
       - publish:
           requires:
             - build
@@ -75,4 +79,5 @@ workflows:
             tags:
               only: /^v[0-9]+(\.[0-9]+)*/
             branches:
+              only: main
               ignore: /.*/
