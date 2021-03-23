@@ -54,6 +54,8 @@ jobs:
   doc:
     <<: *defaults
     steps:
+      - attach_workspace:
+          at: .
       - run:
         command: bash ./doc.sh
 workflows:
