@@ -53,10 +53,8 @@ jobs:
       - run: npm publish
   doc:
     <<: *defaults
-    steps:
-      - attach_workspace:
-          at: .
-      - run: sh doc.sh
+    commands:
+      - bash ./doc.sh
 workflows:
   version: 2
   build_accept_deploy:
