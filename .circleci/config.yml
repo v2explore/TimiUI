@@ -70,8 +70,8 @@ workflows:
           requires:
             - prepare
       - doc:
-        requires:
-          - build
+          requires:
+            - build
       - publish:
           requires:
             - build
