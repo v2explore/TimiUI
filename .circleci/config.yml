@@ -54,7 +54,8 @@ jobs:
   doc:
     <<: *defaults
     commands:
-      - bash ./doc.sh
+      steps:
+        - run: sh ./doc.sh
 workflows:
   version: 2
   build_accept_deploy:
