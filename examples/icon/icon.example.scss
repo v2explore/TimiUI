@@ -1,0 +1,19 @@
+@import '../../lib/variable';
+.icon-example {
+  ul {
+    li {
+      display: inline-block;
+      width: 16.6%;
+      font-size: 26px;
+      text-align: center;
+      padding: 10px;
+      cursor: pointer;
+      &:hover {
+        background-color: fade_out($default-color, 0.9);
+      }
+      .example-icon-desc {
+        font-size: 12px;
+      }
+    }
+  }
+}

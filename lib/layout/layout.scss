@@ -5,16 +5,16 @@
   &-content {
     flex-grow: 2;
   }
-  & & {
+  & > & {
     flex-grow: 1;
     flex-direction: row;
   }
   &-hasAsider {
     flex-direction: row;
-    .tm-layout-asider {
+    > .tm-layout-asider {
       height: auto;
     }
-    .tm-layout {
+    > .tm-layout {
       flex-direction: column;
     }
   }

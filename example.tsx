@@ -5,6 +5,8 @@ import { Asider, Content, Footer, Header, Icon, Layout } from './lib/index';
 import IconDemo from './examples/icon/icon.demo';
 import DialogDemo from './examples/dialog/dialog.demo';
 import LayoutDemo from './examples/layout/layout.demo';
+import InputDemo from './examples/input/input.demo';
+import ButtonDemo from './examples/button/button.demo';
 import './example.scss';
 
 ReactDOM.render(
@@ -16,7 +18,7 @@ ReactDOM.render(
           <span>𝙏𝙄𝙈𝙄 𝙐𝙄</span>
         </span>
         <span>
-          <Icon name="github" color="white" />
+          <Icon name="github" color="white" style={{cursor: 'pointer'}} onClick={() => window.open('https://github.com/v2explore/TimiUI')} />
         </span>
       </Header>
       <Layout>
@@ -30,13 +32,24 @@ ReactDOM.render(
               <NavLink to="/icon">Icon</NavLink>
             </li>
             <li>
+              <NavLink to="/button">Button</NavLink>
+            </li>
+            <li>
+              <NavLink to="/input">Input</NavLink>
+            </li>
+            <li>
               <NavLink to="/dialog">Dialog</NavLink>
+            </li>
+            <li>
+              <NavLink to="/form">Form</NavLink>
             </li>
           </ul>
         </Asider>
         <Content className="tm-site-main">
           <Route path="/layout" component={LayoutDemo} />
           <Route path="/icon" component={IconDemo} />
+          <Route path="/button" component={ButtonDemo} />
+          <Route path="/input" component={InputDemo} />
           <Route path="/dialog" component={DialogDemo} />
         </Content>
       </Layout>

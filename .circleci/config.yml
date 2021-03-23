@@ -51,7 +51,12 @@ jobs:
           at: .
       - run: npm config set //registry.npmjs.org/:_authToken $NPM_TOKEN
       - run: npm publish
-
+  doc:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: .
+      - run: ./doc.sh
 workflows:
   version: 2
   build_accept_deploy:
@@ -71,3 +76,4 @@ workflows:
               only: /^v[0-9]+(\.[0-9]+)*/
             branches:
               ignore: /.*/
+      - doc

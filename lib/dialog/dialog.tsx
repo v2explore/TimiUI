@@ -1,7 +1,7 @@
 import React, { ReactElement, ReactFragment, ReactNode } from 'react';
 import ReactDOM from 'react-dom';
 import { scopedClassMaker } from '../helpers/helpers';
-import { Icon } from '../index';
+import { Icon, Button } from '../index';
 import './dialog.scss';
 
 interface Props {
@@ -48,12 +48,12 @@ const Dialog: React.FC<Props> = ({
           <footer className={sc('footer')}>{footer}</footer>
         ) : footer === null ? null : (
           <footer className={sc('footer')}>
-            <button className={sc('button')} onClick={onClickClose}>
+            <Button className={sc('button')} onClick={onClickClose}>
               取消
-            </button>
-            <button className={sc('button')} onClick={onClickClose}>
+            </Button>
+            <Button level="important" className={sc('button')} onClick={onClickClose}>
               确定
-            </button>
+            </Button>
           </footer>
         )}
       </div>
@@ -93,7 +93,7 @@ const createModal = (
 export const alert = (content: ReactNode, callback: () => void) => {
   const close = createModal(
     content,
-    <button onClick={() => close() && callback && callback()}>确定</button>,
+    <Button level="important" onClick={() => close() && callback && callback()}>确定</Button>,
   );
 };
 
@@ -105,8 +105,8 @@ export const confirm = (
   const close = createModal(
     content,
     <React.Fragment>
-      <button className={sc('button')} onClick={() => close() && no && no()}>取消</button>
-      <button className={sc('button')} onClick={() => close() && yes && yes()}>确定</button>
+      <Button className={sc('button')} onClick={() => close() && no && no()}>取消</Button>
+      <Button level="important" className={sc('button')} onClick={() => close() && yes && yes()}>确定</Button>
     </React.Fragment>,
   );
 };

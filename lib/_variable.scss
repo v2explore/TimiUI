@@ -1,7 +1,9 @@
-$main-color: linear-gradient(90deg,#526efa, #7a90ff);
+$main-bg: linear-gradient(90deg,#526efa, #7a90ff);
+
 $default-color: #7a90ff;
 $primary-color: #526efa;
 $common-color: #6b83fb;
+$danger-color: #ff4d4f;
 
 @mixin flexCenter {
   display: flex;

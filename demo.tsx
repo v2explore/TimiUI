@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Highlight, {defaultProps} from "prism-react-renderer";
-import {useState} from 'react';
+import './demo.scss';
+import Button from './lib/button/button';
 
 interface Props {
   code: string;
@@ -28,8 +29,8 @@ const Demo: React.FunctionComponent<Props> = (props) => {
       <div className="example">
         {props.children}
       </div>
-      <div>
-        <button onClick={() => setCodeVisible(!codeVisible)}>查看代码</button>
+      <div style={{padding: '20px 0'}}>
+        <Button onClick={() => setCodeVisible(!codeVisible)}>查看代码</Button>
         {codeVisible && code}
       </div>
     </div>
