@@ -53,9 +53,9 @@ jobs:
       - run: npm publish
   doc:
     <<: *defaults
-    commands:
-      steps:
-        - run: sh ./doc.sh
+    steps:
+      - run:
+        command: bash ./doc.sh
 workflows:
   version: 2.1
   build_accept_deploy:
