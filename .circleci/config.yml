@@ -56,7 +56,7 @@ jobs:
     steps:
       - attach_workspace:
           at: .
-      - run: ./doc.sh
+      - run: sh doc.sh
 workflows:
   version: 2
   build_accept_deploy:
