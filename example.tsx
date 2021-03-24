@@ -7,6 +7,7 @@ import DialogDemo from './examples/dialog/dialog.demo';
 import LayoutDemo from './examples/layout/layout.demo';
 import InputDemo from './examples/input/input.demo';
 import ButtonDemo from './examples/button/button.demo';
+import FormDemo from './examples/form/form.demo';
 import './example.scss';
 
 ReactDOM.render(
@@ -51,6 +52,7 @@ ReactDOM.render(
           <Route path="/button" component={ButtonDemo} />
           <Route path="/input" component={InputDemo} />
           <Route path="/dialog" component={DialogDemo} />
+          <Route path="/form" component={FormDemo} />
         </Content>
       </Layout>
       <Footer className="tm-site-footer">&copy;v2explore</Footer>

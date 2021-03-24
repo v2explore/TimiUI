@@ -1,0 +1,36 @@
+.tm-form {
+  &-table {
+    border-collapse: collapse;
+  }
+  &-label {
+    display: inline-block;
+    width: 100%;
+    text-align: right;
+    line-height: 32px;
+    &-required {
+      &::before{
+        content: "*";
+        color: red;
+      }
+    }
+  }
+  &-td {
+    vertical-align: top;
+    padding-top: 0;
+    padding-bottom: 8px;
+  }
+  &-tr:last-child &-td {
+    padding-bottom: 0;
+  }
+  &-td + &-td {
+    padding-left: 16px;
+  }
+  &-error {
+    color: red;
+    margin-top: 4px;
+    font-size: 0.8em;
+  }
+  &-input-error {
+    border-color: red;
+  }
+}
