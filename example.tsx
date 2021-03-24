@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter as Router, Route, NavLink } from 'react-router-dom';
-import { Asider, Content, Footer, Header, Icon, Layout } from './lib/index';
+import { Icon, Layout } from './lib/index';
+import { Asider, Content, Footer, Header } from './lib/layout/layout';
 import IconDemo from './examples/icon/icon.demo';
 import DialogDemo from './examples/dialog/dialog.demo';
 import LayoutDemo from './examples/layout/layout.demo';

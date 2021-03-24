@@ -1,6 +1,9 @@
 import React, { ReactElement } from 'react';
 import { scopedClassMaker, classnames } from '../helpers/helpers';
 import Asider from './asider';
+import Header from './header';
+import Content from './content';
+import Footer from './footer';
 import './layout.scss';
 
 const sc = scopedClassMaker('tm-layout');
@@ -15,4 +18,10 @@ const Layout: React.FC<Props> = (props) => {
   return <div className={classnames(sc(''), className , hasAsider ? sc('hasAsider') : '')} {...rest}>{children}</div>;
 };
 
+export {
+  Asider,
+  Header,
+  Content,
+  Footer,
+}
 export default Layout;
