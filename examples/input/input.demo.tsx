@@ -2,7 +2,7 @@ import InputExample from './input.example';
 import React, {Fragment} from 'react';
 import Demo from '../../demo';
 
-const IconDemo = () => {
+const InputDemo = () => {
   return (
     <Fragment>
       <Demo code={require('!!raw-loader!./input.example.tsx').default}>
@@ -12,4 +12,4 @@ const IconDemo = () => {
   );
 };
 
-export default IconDemo;
+export default InputDemo;

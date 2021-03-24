@@ -9,13 +9,14 @@ import LayoutDemo from './examples/layout/layout.demo';
 import InputDemo from './examples/input/input.demo';
 import ButtonDemo from './examples/button/button.demo';
 import FormDemo from './examples/form/form.demo';
+import Dashboard from './examples/dashboard/dashboard';
 import './example.scss';
 
 ReactDOM.render(
   <Router>
     <Layout className="tm-site-page">
       <Header className="tm-site-header">
-        <span className="tm-site-header-title">
+        <span className="tm-site-header-title" onClick={ () => location.href = '/'}>
           <Icon className="tm-site-header-icon" name="timiui" />
           <span>𝙏𝙄𝙈𝙄 𝙐𝙄</span>
         </span>
@@ -48,6 +49,7 @@ ReactDOM.render(
           </ul>
         </Asider>
         <Content className="tm-site-main">
+          <Route exact path="/" component={Dashboard} />
           <Route path="/layout" component={LayoutDemo} />
           <Route path="/icon" component={IconDemo} />
           <Route path="/button" component={ButtonDemo} />

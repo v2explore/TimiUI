@@ -1,0 +1,30 @@
+@import '../../lib/variable';
+
+.dashboard-example {
+  padding: 0 24px;
+  &-header {
+    font-size: 34px;
+    color: $primary-color;
+  }
+  &-icon {
+    vertical-align: top;
+    margin-right: 30px;
+  }
+  &-title {
+    font-size: 20px;
+  }
+  &-desc {
+    font-size: 14px;
+    color: rgba(0,0,0,0.6);
+    margin: 30px 0;
+  }
+  &-code {
+    background-color: #f5f5f5;
+    overflow: auto;
+    padding: 10px 18px;
+    color: rgba(0,0,0,0.85);
+    code {
+      font-family: Lucida Console,Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;
+    }
+  }
+}
